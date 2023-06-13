@@ -5,6 +5,8 @@ import re
 import rolloutapi_get
 import datetime_get
 from discord.ext import commands, tasks
+from webserver import keep_alive
+import os
 
 complete = rolloutapi_get.get_info()
 stats = complete.split("|")
@@ -13,7 +15,6 @@ non_nitro = stats[1]
 
 
 class MyClient(discord.Client):
-
     complete = rolloutapi_get.get_info()
     stats = complete.split("|")
     # nitro = stats[0]
@@ -74,4 +75,8 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTExNjQ4MTY1MDQ4Njk0Nzg3MQ.Gem4Vx.CDAFISoRgvJY1Qccoh_pz3NZYvqMO5sq9RIVvo')
+
+keep_alive()
+
+TOKEN = os.environ.get("DISCORD_BOT_SECRET")
+client.run(TOKEN)
