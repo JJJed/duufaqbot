@@ -74,4 +74,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTExNjQ4MTY1MDQ4Njk0Nzg3MQ.GiEUz_.sedPqdN_NsGCaeuNtAbZ1urTF8_W6iN9PoyQJs')
+client.run('MTExNjQ4MTY1MDQ4Njk0Nzg3MQ.Gem4Vx.CDAFISoRgvJY1Qccoh_pz3NZYvqMO5sq9RIVvo')
