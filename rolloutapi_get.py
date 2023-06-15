@@ -1,9 +1,6 @@
 import requests
 import re
 
-import requests
-import re
-
 url = "https://discordrollout.nekos.sh/api/data/status"
 
 
