@@ -29,7 +29,7 @@ class MyClient(discord.Client):
 
         channel = client.get_channel(1117969208597286993)
 
-        message = channel.get_partial_message(1118916897929437325)
+        message = channel.get_partial_message(1120729205303414824)
 
         @tasks.loop(seconds=60)  # repeat after every 60 seconds
         async def update():
@@ -52,7 +52,7 @@ class MyClient(discord.Client):
             embed2.color = 0x5865f2
             embed2.add_field(name="Nitro: ", value=nitro, inline=False)
             embed2.add_field(name="Non-Nitro: ", value=non_nitro, inline=False)
-            embed2.set_footer(text="Updates every 60 seconds.")
+            embed2.set_footer(text="Checks for updates every 60 seconds.")
 
             await message.edit(embed=embed2)
 
